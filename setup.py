@@ -15,15 +15,15 @@ import sys
 
 from setuptools import setup, find_packages
 
-version = sys.argv[-1].split('=')[1]
-sys.argv = sys.argv[0:len(sys.argv) - 1]
+#version = sys.argv[-1].split('=')[1]
+#sys.argv = sys.argv[0:len(sys.argv) - 1]
 
 with open("README.md", "r", encoding="utf8") as fh:
     long_description = fh.read()
 
 setup(
     name="WeTextProcessing",
-    version=version,
+    version="1.0.4",
     author="Zhendong Peng, Xingchen Song",
     author_email="pzd17@tsinghua.org.cn, sxc19@tsinghua.org.cn",
     long_description=long_description,
@@ -38,7 +38,7 @@ setup(
         ],
         "itn": ["*.fst", "chinese/data/*/*.tsv"],
     },
-    install_requires=['pynini==2.1.6', 'importlib_resources'],
+    install_requires=['pynini', 'importlib_resources'],
     entry_points={
         "console_scripts": [
             "wetn = tn.main:main",
